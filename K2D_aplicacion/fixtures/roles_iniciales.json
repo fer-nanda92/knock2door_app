@@ -1,0 +1,32 @@
+[
+  {
+    "model": "K2D_aplicacion.usuarioperfil",
+    "pk": 1,
+    "fields": {
+      "rut_tax_id": "76.123.456-7",
+      "tipo_usuario": "INMOBILIARIA",
+      "nombre_o_razon_social": "Inmobiliaria Ejemplo SpA",
+      "email": "contacto@inmobiliariaejemplo.cl",
+      "telefono": "+56912345678",
+      "direccion": "Av. Providencia 1234, Oficina 501",
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "K2D_aplicacion.usuarioperfil",
+    "pk": 2,
+    "fields": {
+      "rut_tax_id": "12.345.678-9",
+      "tipo_usuario": "AGENTE",
+      "nombre_o_razon_social": "Carlos Pérez Corredor",
+      "email": "carlos.perez@knock2door.cl",
+      "telefono": "+56987654321",
+      "direccion": "Vitacura 4500",
+      "is_active": true,
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  }
+]

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block titulo %}Gestión de Inmuebles - Bienvenida{% endblock %}
+
+{% block titulo_encabezado %}
+    <span style="color: #2563eb;">🏢</span> Sistema de Gestión de Inmuebles y Visitas
+{% endblock %}
+
+{% block contenido %}
+<style>
+    /* Estilos estéticos modernos para la página de bienvenida */
+    .welcome-container {
+        padding: 10px 0;
+    }
+
+    .welcome-lead {
+        font-size: 1.15rem;
+        color: #1f2937;
+        line-height: 1.6;
+        margin-bottom: 24px;
+        font-weight: 500;
+    }
+
+    .target-badge {
+        background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        border-left: 4px solid #2563eb;
+        padding: 16px 20px;
+        border-radius: 0 8px 8px 0;
+        margin-bottom: 30px;
+        color: #1e40af;
+        font-size: 1rem;
+        box-shadow: 0 2px 4px rgba(37, 99, 235, 0.05);
+    }
+
+    .service-status-box {
+        display: inline-flex;
+        align-items: center;
+        background-color: #ecfdf5;
+        color: #065f46;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        border: 1px solid #a7f3d0;
+    }
+
+    .status-dot {
+        height: 8px;
+        width: 8px;
+        background-color: #10b981;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 8px;
+        box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    }
+</style>
+
+<div class="welcome-container">
+    <p class="welcome-lead">
+        Bienvenido a la plataforma centralizada para la digitalización de propiedades.
+    </p>
+
+    <div class="target-badge">
+        <strong>Orientado a:</strong> Propietarios (personas naturales), Inmobiliarias y Agentes.
+    </div>
+
+    <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 25px 0;">
+
+    <div class="service-status-box">
+        <span class="status-dot"></span>
+        Estado del servicio:&nbsp;<strong>Activo (Etapa I)</strong>
+    </div>
+</div>
+{% endblock %}

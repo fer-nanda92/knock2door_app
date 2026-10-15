@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block titulo %}Error 404 - No encontrado{% endblock %}
+
+{% block titulo_encabezado %}Error 404{% endblock %}
+
+{% block contenido %}
+<style>
+    /* Estilos específicos para la vista de error 404 */
+    .card {
+        text-align: center;
+        background-color: #f8d7da !important;
+        color: #721c24;
+    }
+    h2 {
+        font-size: 28px;
+        color: #721c24;
+        margin-top: 0;
+    }
+    .card a {
+        color: #721c24;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+</style>
+
+<h2>Recurso o Inmueble no encontrado</h2>
+<p>La dirección ingresada no existe o no se encuentra disponible en la plataforma.</p>
+<p><a href="{% url 'bienvenida' %}">Volver al inicio</a></p>
+{% endblock %}
+
