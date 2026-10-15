@@ -1,9 +1,8 @@
 from django.db import models
 from django.utils import timezone
 
-# 1. Modelo de Perfil de Usuario (Extensión del usuario del sistema)
+# 1. Modelo de Perfil de Usuario
 class UsuarioPerfil(models.Model):
-    # Tipos de usuarios definidos en el requerimiento
     TIPO_USUARIO_CHOICES = [
         ('PERSONA', 'Persona Natural Propietaria'),
         ('INMOBILIARIA', 'Empresa Inmobiliaria'),
@@ -47,9 +46,7 @@ class Inmueble(models.Model):
         ('INACTIVO', 'Inactivo'),
     ]
 
-    # Relación ForeignKey con la persona o empresa dueña de la propiedad
     propietario = models.ForeignKey(UsuarioPerfil, on_delete=models.CASCADE, related_name='propiedades')
-    
     titulo = models.CharField(max_length=100, null=False)
     descripcion = models.TextField(max_length=500, null=False)
     tipo_propiedad = models.CharField(max_length=20, choices=TIPO_PROPIEDAD_CHOICES, null=False)
@@ -99,7 +96,7 @@ class Visita(models.Model):
         return f"Visita a {self.inmueble.titulo} - {self.fecha_programada} {self.hora_programada}"
 
 
-# 4. Modelo para el Historial de Cambios de Estado (Trazabilidad)
+# 4. Modelo para el Historial de Cambios de Estado
 class HistorialEstadoInmueble(models.Model):
     inmueble = models.ForeignKey(Inmueble, on_delete=models.CASCADE, related_name='historial_estados')
     usuario = models.ForeignKey(UsuarioPerfil, on_delete=models.SET_NULL, null=True)
@@ -122,3 +119,4 @@ class RegistroAuditoria(models.Model):
 
     def __str__(self):
         return f"Auditoría: {self.accion} - {self.fecha_registro}"
+    
